@@ -25,8 +25,17 @@
   "related_identifiers": [
     {
       "identifier": "https://github.com/sevenevesai/SharpSwitchGap",
-      "relation": "isSupplementTo",
+      "relation": "isSupplementedBy",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Polynomial-Mixing-of-the-Switch-Chain-for-Every-Graphical-Degree-Sequence-September-25-2026",
+      "relation": "references",
+      "resource_type": "publication-preprint",
       "scheme": "url"
     }
-  ]
+  ],
+  "version": "1.0.0",
+  "language": "eng"
 }
