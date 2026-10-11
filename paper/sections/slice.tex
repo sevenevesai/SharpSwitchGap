@@ -1,0 +1,89 @@
+\section{Weighted slice inequality}\label{sl:section}
+This section concerns a uniform subset slice and has no graph interpretation.
+It compares the Johnson energy with the projections onto centered equality
+indicators, weighted by the equality probability $p$ of \eqref{cell:p}. The
+proof reuses the Gram decomposition and the first slice-moment computation
+of OpenAI~\cite[Lemma~6.1]{OAI26}, which rest on Filmus's decomposition of
+the Johnson scheme~\cite[Lemmas~18 and~24]{Filmus16}. The second
+slice-moment identity and the weighted inequality are new; without the weight
+$p$ the inequality fails (Remark~\ref{asm:weighting}).
+Section~\ref{asm:section} applies the lemma on every pair fiber.
+
+On a uniform $q$-slice of $N$ labels let $x_i$ be the membership indicators,
+$h=I-\Pi$, where here $\Pi$ denotes the slice average, $G=J/2$, and let $p$
+be given by \eqref{cell:p}. Set
+\[
+ z_{ij}=\mathbf 1_{x_i=x_j}-p,\qquad
+ S=\sum_{i<j}Q_{ij},
+\]
+where $Q_{ij}$ is projection onto $z_{ij}$, interpreted as zero if
+$z_{ij}=0$.
+
+\begin{lemma}[Weighted slice inequality]\label{sl:weighted}
+On every uniform slice, $G-pS\succeq h$.
+\end{lemma}
+\begin{proof}
+One-state slices have $G=S=h=0$. For $N=2,q=1$, $p=S=0$ and $G=h$.
+Otherwise $N\ge3$, $1\le q<N$, and $0<p<1$. Put $r=N-q$ and $m_N=\binom N2$.
+Map the Euclidean space of pair coefficients into the slice space by
+\[
+ Bc=\sum_{i<j}c_{ij}\frac{z_{ij}}{\sqrt{p(1-p)}}.
+\]
+Then $S=BB^*$. The coefficient space decomposes orthogonally as
+\[
+ C_0=\mathbb R\mathbf 1,\quad C_1=\{c_{ij}=u_i+u_j:\ \sum_i u_i=0\},\quad
+ C_2=\{c:\ \sum_{j\ne i}c_{ij}=0\text{ for every }i\}.
+\]
+Here $c_{ji}=c_{ij}$. The map $u\mapsto(u_i+u_j)$ is injective for $N\ge3$;
+the orthogonal complement of its whole image is exactly $C_2$.
+The dimensions are $1,N-1,m_N-N$, so $C_2=0$ if $N=3$.
+
+\paragraph{The Gram scalars.}
+The number of equal pairs is fixed; hence $BC_0=0$. By label symmetry the
+entries of $B^*B$ depend only on the intersection size of the indexing pairs.
+For a fixed pair $ij$, the sums of $c_{kl}$ over other pairs meeting it and
+over disjoint pairs are respectively
+$(N-4)c_{ij},-(N-3)c_{ij}$ on $C_1$, and $-2c_{ij},c_{ij}$ on $C_2$.
+These follow by summing the row sums (which are $(N-2)u_i$ on $C_1$)
+and using the zero total sum. Thus $B^*B$ acts as scalars $\mu_1,\mu_2$.
+Its diagonal entries are one. The identities
+\begin{align*}
+ \sum_{i<j}(u_i+u_j)z_{ij}&=(2q-N)\sum_i u_ix_i,\\
+ \operatorname{Var}\Big(\sum_i u_ix_i\Big)&=\frac{qr}{N(N-1)}\sum_i u_i^2,\qquad
+ \sum_{i<j}(u_i+u_j)^2=(N-2)\sum_i u_i^2
+\end{align*}
+follow from $\sum_i u_i=0$, $\sum_i x_i=q$, and
+$\mathbb E x_i=q/N$, $\mathbb E x_ix_j=q(q-1)/(N(N-1))$. Since
+$1-p=2qr/(N(N-1))$, they give the first formula below; the trace identity
+$(N-1)\mu_1+(m_N-N)\mu_2=m_N$ gives the second:
+\[
+ p\mu_1=\frac{(N-2q)^2}{2(N-2)},\qquad
+ p\mu_2=\frac{2(q-1)(r-1)}{(N-2)(N-3)}\quad(N\ge4).
+\]
+
+\paragraph{Comparison on the images.}
+The mutually orthogonal images $U_i=BC_i$ exhaust $\operatorname{ran}S$, and
+$S$ acts there by $\mu_i$. Direct transposition summation gives
+\[
+ Gx_i=(Nx_i-q)/2,\qquad
+ G(x_ix_j)=(N-1)x_ix_j-(q-1)(x_i+x_j)/2.
+\]
+The image $U_1$ is linear. For $C_2$, expansion of
+$z_{ij}=1-p-x_i-x_j+2x_ix_j$ cancels the constant and linear coefficients;
+its row sums also cancel the lower terms in the second displayed formula.
+Consequently $G$ acts by $N/2$ on $U_1$ and by $N-1$ on $U_2$.
+Zero images require no eigenvalue assertion. On the nonzero images the
+eigenvalues of $G-pS-h$ are nonnegative: on $U_1$,
+\[
+ \frac N2-p\mu_1-1=\frac{2(q-1)(r-1)}{N-2}\ge0;
+\]
+on $U_2$, using $(q-1)(r-1)\le(N-2)^2/4$,
+\[
+ 0\le p\mu_2\le\frac{N-2}{2(N-3)}\le1,\qquad
+ N-1-p\mu_2-1\ge N-3>0.
+\]
+On the orthogonal complement of constants and $U_1\oplus U_2$, $S=0$, while
+Lemma~\ref{joh:gap} gives $G\succeq(N/2)I\succeq I$. These subspaces
+are invariant under the self-adjoint $G$; constants are killed by all the
+operators. This completes the proof, including all boundary cases.
+\end{proof}

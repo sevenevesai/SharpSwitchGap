@@ -1,0 +1,22 @@
+# LLM tooling and private working files
+.claude/
+CLAUDE.md
+.vscode/
+
+# Lean build outputs and fetched packages
+lean/.lake/
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts; the built paper/main.pdf is committed deliberately
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.xdv
+paper/*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db

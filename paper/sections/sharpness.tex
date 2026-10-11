@@ -1,0 +1,58 @@
+\section{Best possible constants}\label{shp:section}
+This section proves that the constants of Theorem~\ref{thm:main} are best
+possible universal constants for every $n\ge4$, that is, the worst case over
+$d$. Equality holds for every degree vector with exactly two realizations,
+and such vectors exist for every $n\ge4$.
+
+\begin{proposition}[Two realizations]\label{shp:two}
+If $M=2$, equality holds in both bounds of \eqref{eq:gaps}.
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{asm:kernel} the two realizations are switch neighbors, so $L$
+is the Laplacian of one edge, with gap two. Within a pair fiber each
+reassigned label toggles two edges, so two graphs of one fiber that differ in
+four edges differ by one singleton exchange. Hence a pair fiber contains both
+realizations only when the pair is one of the two parts of the bipartition of
+the toggled four-cycle, by the multiplicity count in the proof of
+Lemma~\ref{joh:gap}. Every other pair fiber has one state, so exactly two
+$h_a$ are nonzero, and each equals $I-\Pi$ on the two-state space. Thus
+$H=2(I-\Pi)$, and \eqref{eq:normalization}--\eqref{eq:operators} give
+$I-P=(I-\Pi)/(6\binom n4)$ and $I-K=2(I-\Pi)/\binom n2$, which is equality in
+both parts of \eqref{eq:gaps}.
+\end{proof}
+
+\begin{proposition}[Extremal instances]\label{shp:extremal}
+For every $n\ge4$, the degree vector $d=(2,2,1,1,0,\ldots,0)$ has $M=2$. The
+degree vector $(3,3,2,1,1)$ has $M=2$ and neither an isolated nor a
+dominating vertex.
+\end{proposition}
+\begin{proof}
+Take $d=(2,2,1,1,0,\ldots,0)$. The edge $12$ must be present: otherwise both
+vertices $1,2$ would require both $3,4$, contradicting their degrees. The only
+realizations are
+\[
+ \{12,13,24\},\qquad \{12,14,23\}.
+\]
+They differ by one switch, and the two nontrivial pair fibers are indexed by
+$\{1,2\}$ and $\{3,4\}$; each is the whole two-state space.
+
+Take $d=(3,3,2,1,1)$. The edge $12$ must be present: otherwise both vertices
+$1,2$ would be adjacent to all of $3,4,5$, giving vertex $4$ degree two. The
+four remaining edges at $1$ and $2$ end in $\{3,4,5\}$, whose degree sum is
+four, so no edge lies inside $\{3,4,5\}$ and vertex $3$ is adjacent to both
+$1$ and $2$. Each of $1,2$ then has one neighbor in $\{4,5\}$, and these
+neighbors are distinct because vertices $4,5$ have degree one. The only
+realizations are therefore
+\[
+ \{12,13,23,14,25\},\qquad \{12,13,23,15,24\}.
+\]
+No degree is zero, and none equals $n-1=4$.
+\end{proof}
+
+The instance $(2,2,1,1,0,\ldots,0)$ is a two-element realization space with
+$n-4$ isolated vertices appended. Nothing is claimed here about the best
+constants over degree vectors whose realization spaces are larger; whether
+equality or near-equality occurs for large $M$ is open
+(Section~\ref{op:section}). For regular bipartite graphs in a specified
+degree range, Tikhomirov and Youssef~\cite{TY23} proved sharp Poincar\'e
+bounds for the switch chain, and sharp log-Sobolev bounds for fixed degree.

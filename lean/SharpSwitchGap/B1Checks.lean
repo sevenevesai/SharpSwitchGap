@@ -1,0 +1,7 @@
+import SharpSwitchGap.WeightedSlice
+import SharpSwitchGap.SharpComparison
+
+#print axioms SharpSwitchGap.Johnson.centered_poincare
+#print axioms SharpSwitchGap.WeightedSlice.residual_johnson_bound
+#print axioms SharpSwitchGap.WeightedSlice.weighted_centered
+#print axioms SharpSwitchGap.SharpComparison.generator_le_laplacian

@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Sharp spectral gaps for the switch and Curveball chains on every graphical degree sequence},pdfauthor={Mark T. Short}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Sharp spectral gaps for the switch and Curveball chains\\on every graphical degree sequence}
+\author{Mark T. Short\\[2pt]\small Independent researcher\\\small\url{https://seveneves.ai}}
+\date{October 11, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every graphical degree vector on $n\ge4$ labeled vertices with more than
+one realization, the lazy chain that proposes switches uniformly on four
+vertices has spectral gap at least $1/(6\binom n4)$, and the chain that
+performs a uniform undirected Curveball trade on a uniformly chosen vertex
+pair has spectral gap at least $2/\binom n2$; both constants are the worst
+case over all such degree vectors, for every $n$. Consequently the
+total-variation mixing times at distance $1/4$ are at most $n^6/4+1$ for the
+switch chain and $n^4/16+1$ for the Curveball chain. Both gap bounds are
+kernel-checked in Lean, together with a total-variation bound for the switch
+chain whose prefactor is $\sqrt M/2$, where $M$ is the number of
+realizations, in place of the $\sqrt{M-1}/2$ used here.
+\end{abstract}
+\input{sections/introduction}
+\input{sections/setup}
+\input{sections/johnson}
+\input{sections/cell}
+\input{sections/slice}
+\input{sections/assembly}
+\input{sections/sharpness}
+\input{sections/formal}
+\input{sections/open-problems}
+\input{sections/triples}
+\input{sections/acknowledgments}
+\input{sources/references}
+\end{document}

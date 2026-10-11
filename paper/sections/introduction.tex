@@ -1,0 +1,163 @@
+\section{Introduction}\label{sec:introduction}
+Let $V=\{1,\ldots,n\}$, where $n\ge4$, and let $d=(d_1,\ldots,d_n)$ be a
+graphical degree vector. Write $\Omega_d$ for the set of simple undirected
+graphs on $V$ whose labeled degree vector is $d$, put $M=|\Omega_d|$, and let
+$\pi$ be the uniform probability measure on $\Omega_d$. A \emph{switch}
+removes two disjoint edges and inserts a different perfect matching on their
+four vertices, provided both new edges are absent. A \emph{Curveball trade} at
+a vertex pair $\{i,j\}$ redistributes the vertices adjacent to exactly one of
+$i$ and $j$ between these two endpoints, keeping both endpoint degrees and
+every other adjacency. Both moves preserve simplicity and every vertex degree.
+
+We use the following precise discrete-time conventions. The switch chain $P$
+holds with probability $1/2$. Otherwise it chooses a four-set uniformly and one
+of the six ordered pairs of distinct perfect matchings on that set uniformly.
+It removes the first matching and adds the second if all removed edges are
+present and all added edges absent; otherwise it holds. The Curveball chain
+$K$ chooses an unordered vertex pair uniformly and moves to a graph chosen
+uniformly among those obtainable from the current one by a Curveball trade at
+that pair, the current graph included; no additional holding probability is
+imposed. Time
+includes rejected proposals and holds for $P$, and counts trades for $K$. For
+probability measures on $\Omega_d$ and $Q\in\{P,K\}$, set
+\[
+ \|\mu-\nu\|_{\mathrm{TV}}
+ =\frac12\sum_{G\in\Omega_d}|\mu(G)-\nu(G)|,
+ \qquad
+ t_{\mathrm{mix}}^Q(\varepsilon)
+ =\min\Bigl\{t\in\mathbb Z_{\ge0}:
+ \max_{G\in\Omega_d}\|Q^t(G,\cdot)-\pi\|_{\mathrm{TV}}\le\varepsilon\Bigr\}.
+\]
+For $M>1$ write $\operatorname{gap}(Q)=1-\lambda_2(Q)$, where $\lambda_2(Q)$ is
+the second largest eigenvalue of $Q$, which is symmetric
+(Section~\ref{sec:setup}). Here and throughout, logarithms are
+natural.
+
+\begin{theorem}\label{thm:main}
+For every graphical $d$ on $n\ge4$ vertices with $M>1$,
+\begin{equation}\label{eq:gaps}
+ \operatorname{gap}(P)\ge\frac{1}{6\binom n4},\qquad
+ \operatorname{gap}(K)\ge\frac{2}{\binom n2}.
+\end{equation}
+For every $n\ge4$, both constants are best possible universal constants,
+that is, the worst case over $d$: equality holds in both bounds for
+$d=(2,2,1,1,0,\ldots,0)$.
+\end{theorem}
+
+Equality holds whenever $M=2$. Section~\ref{shp:section} proves this,
+describes the extremal instances, and states what is not claimed for larger
+realization spaces.
+
+\begin{corollary}[Mixing times]\label{cor:mixing}
+For $M>1$ and $0<\varepsilon\le1/2$, set
+$A_\varepsilon=\log(1/(2\varepsilon))+\tfrac12\log(M-1)$. Then
+\begin{align}
+ t_{\mathrm{mix}}^P(\varepsilon)&\le\left\lceil6\binom n4 A_\varepsilon\right\rceil,
+ &t_{\mathrm{mix}}^K(\varepsilon)&\le\left\lceil\frac{\binom n2}{2}
+ A_\varepsilon\right\rceil,\label{eq:mixing}\\
+ t_{\mathrm{mix}}^P(1/4)&\le n^6/4+1,
+ &t_{\mathrm{mix}}^K(1/4)&\le n^4/16+1.\label{eq:coarse}
+\end{align}
+If $M=1$, both mixing times are zero.
+\end{corollary}
+
+No sharpness of these mixing bounds is asserted.
+
+\paragraph{History and significance.}
+Uniform sampling of graphs with prescribed degrees is a basic problem for
+degree-constrained network models. Kannan, Tetali and Vempala~\cite{KTV99}
+proved rapid mixing of the switch chain for near-regular bipartite degree
+sequences and proposed the general rapid-mixing problem. Cooper, Dyer and
+Greenhill~\cite{CDG07,CDG12} established polynomial mixing for regular
+undirected graphs. Greenhill and Sfragara~\cite{GS18} extended this to
+irregular undirected degrees under sparsity and degree conditions, and treated
+directed degrees under additional hypotheses including irreducibility.
+Erd\H{o}s, Greenhill, Mezei, Mikl\'os, Solt\'esz and Soukup~\cite{Unified22}
+proved rapid mixing on $P$-stable families of undirected, bipartite and
+directed degree sequences. These results impose restrictions on the degree
+families. Tikhomirov and Youssef~\cite{TY23} proved sharp Poincar\'e bounds
+for regular bipartite graphs in a specified degree range and sharp
+log-Sobolev bounds for fixed degree; their setting is distinct from arbitrary
+undirected degrees.
+
+Verhelst~\cite{Verhelst08} developed trade-based MCMC sampling for binary
+matrices with fixed marginals, including a uniform-stationary variant.
+Carstens, Berger and Strona~\cite{CBS18} defined undirected Curveball trades
+and proved convergence to the uniform distribution. Their mixing-rate
+comparisons are experimental, and they left theoretical rapid mixing open.
+Carstens and Kleer~\cite{CK18} used the Johnson spectrum to compare switch and
+Curveball relaxation times for binary matrices, including irreducible spaces
+with forbidden entries. Their comparison transfers rapid mixing from the
+switch chain; it supplies no universal absolute gap, and the undirected
+comparison is left open in their preprint.
+
+The closest universal results are those of OpenAI~\cite{OAI26} and of Fu, Qin
+and Wang~\cite{FQW26}. The manuscript~\cite{OAI26} is machine-checked in Lean
+and has not been peer reviewed. It develops the pair-fiber framework used
+here, with the triple reduction and the disjoint-cell and slice Gram methods,
+and proves that $t_{\mathrm{mix}}^P(1/4)\le2n^8$ and that $P$ has spectral gap
+at least $[24n^2\binom n4]^{-1}$ \cite[Theorem~1.1]{OAI26}. Fu, Qin and Wang prove sharp swap-chain and
+row-pair resampling bounds for all feasible binary matrix margins; their
+Theorem~5.1 also gives the three-row input used here. Arbitrary row-pair moves
+do not preserve symmetric zero-diagonal adjacency matrices, so their global
+matrix bound does not directly imply Theorem~\ref{thm:main}.
+Theorem~\ref{thm:main} replaces the gap bound of \cite[Theorem~1.1]{OAI26} by
+the best possible universal constant for the same chain, and gives the best
+possible universal constant for undirected Curveball.
+
+\paragraph{Proof strategy.}
+For an unordered vertex pair $a$, let $E_a$ average a function over the
+graphs reachable by a Curveball trade at $a$, put $h_a=I-E_a$ and $H=\sum_ah_a$, and let $L$ be the unnormalized
+Laplacian of the switch graph on $\Omega_d$. Then $I-P=L/(12\binom n4)$ and
+$K=I-H/\binom n2$ (Section~\ref{sec:setup}), so Theorem~\ref{thm:main} reduces
+to $L\succeq H\succeq2(I-\Pi)$, where $\succeq$ is the order of quadratic
+forms and $\Pi$ is projection onto constants. The comparison $H\preceq L$ is
+the classical Johnson comparison. The second inequality follows from
+$H^2\succeq2H$ and $\ker H=\mathbb R\mathbf 1$. As in
+\cite[Proposition~7.1]{OAI26}, we expand
+\[
+ H^2=\sum_{|T|=3}H_T^2-(n-3)H+D,
+\]
+where $H_T$ sums $h_a$ over the three pairs $a$ inside a vertex triple $T$,
+and $D$ is the
+ordered sum of the products $h_ah_b$ over disjoint pairs $a,b$. OpenAI
+proved $H_T^2\succeq H_T$ and $D\succeq0$, hence $H^2\succeq H$
+\cite[Propositions~4.1 and~7.1, Corollary~6.3]{OAI26}. That intermediate
+estimate, with the constant kernel and the classical Johnson comparison,
+already gives $\operatorname{gap}(P)\ge1/(12\binom n4)$ and
+$\operatorname{gap}(K)\ge1/\binom n2$, and, by the argument of
+Corollary~\ref{cor:mixing}, $t_{\mathrm{mix}}^P(1/4)\le n^6/2+1$. In
+particular the inverse-fourth order follows from the ingredients
+of~\cite{OAI26} plus the Johnson comparison; it is not the new part of this
+paper, and the improvement of Corollary~\ref{cor:mixing} over those
+ingredients is the factor two.
+
+The new step is the weighted estimate $D\succeq H$, which gives
+$H^2\succeq(n-2)H-(n-3)H+H=2H$. It yields the exact factor two and the
+Curveball constant $2/\binom n2$; Section~\ref{shp:section} shows separately
+that both constants are attained. We prove $D\succeq H$ in two weighted
+steps. For each disjoint pair, the interaction $h_ah_b+h_bh_a$ is
+bounded below by twice a cross-square projection minus projections onto
+centered equality indicators, each weighted by the probability $p_a$ that two
+singleton labels of its fiber receive the same endpoint. On every slice, the
+Johnson energy minus the weighted equality projections still dominates the
+centered identity. Without the weights this slice inequality fails
+(Remark~\ref{asm:weighting}). The cell analysis follows
+\cite[Proposition~5.1]{OAI26} up to its final square, and the slice analysis
+reuses the Gram decomposition of \cite[Lemma~6.1]{OAI26}. New here are the
+weights $p_a$ with the completed square in the cell estimate, the exact
+second slice-moment identity, the weighted slice inequality $G-pS\succeq h$,
+and the assembly $D\succeq H$.
+
+\paragraph{Organization.}
+Section~\ref{sec:setup} defines the pair fibers and operators and identifies
+both chains with them. Section~\ref{joh:section} proves the Johnson gap and
+$H\preceq L$. Section~\ref{cell:section} proves the weighted inequality for
+one disjoint pair, and Section~\ref{sl:section} the weighted slice
+inequality. Section~\ref{asm:section} proves connectivity, $D\succeq H$ and
+$H^2\succeq2H$, and tracks the constants through Theorem~\ref{thm:main} and
+Corollary~\ref{cor:mixing}. Section~\ref{shp:section} proves equality
+whenever $M=2$ and gives extremal instances. Section~\ref{fv:section} describes the Lean verification, and
+Section~\ref{op:section} states open problems. Appendix~\ref{app:section}
+proves the three-row and graph-triple inputs. All proof ingredients are
+supplied in the paper.

@@ -1,0 +1,138 @@
+\section{Assembly}\label{asm:section}
+This section sums the weighted cell and slice inequalities into $D\succeq H$
+and $H^2\succeq2H$, identifies the kernel of $H$, and tracks the constants
+through Theorem~\ref{thm:main} and Corollary~\ref{cor:mixing}. The triple
+estimate is Lemma~\ref{app:triple}, proved in Appendix~\ref{app:section}.
+
+\subsection{The global operator inequality}
+For a vertex triple $T$ let $H_T=\sum_{a\subset T,\,|a|=2}h_a$, and define
+\[
+ D=\sum_{\substack{a,b\in\binom{[n]}2\\a\cap b=\varnothing}}h_ah_b.
+\]
+This is an ordered sum and is self-adjoint; no commutation is assumed.
+Using $h_a^2=h_a$, each diagonal term occurs $n-2$ times in the triple sum,
+and each ordered pair of distinct intersecting pairs occurs once. Thus we
+obtain the expansion of OpenAI~\cite[Proposition~7.1]{OAI26}, which follows
+Caputo's squared-generator method~\cite[Section~1.1,
+Equations~(1.13)--(1.15)]{Caputo08}:
+\begin{equation}\label{asm:expansion}
+ H^2=\sum_{|T|=3}H_T^2-(n-3)H+D,\qquad
+ \sum_{|T|=3}H_T=(n-2)H.
+\end{equation}
+
+\begin{proposition}[Disjoint and global estimates]\label{asm:global}
+The disjoint-pair sum satisfies $D\succeq H$, and consequently
+$H^2\succeq2H$.
+\end{proposition}
+\begin{proof}
+On an $a$-fiber, pairs $b$ containing a nonsingleton label contribute zero to
+both $g_{a,b}$ and $R_{a,b}$. The other pairs index exactly the
+singleton-label transpositions and equality lines. Therefore
+\[
+ G_a:=\sum_{b\cap a=\varnothing}g_{a,b}=J_a/2,\qquad
+ S_a:=\sum_{b\cap a=\varnothing}R_{a,b}=S\text{ on that fiber}.
+\]
+Sum Lemma~\ref{cell:interaction} over \emph{unordered} disjoint $\{a,b\}$.
+Each such pair contributes two copies of $g_{a,b}$, giving exactly
+$\sum_a G_a$, and each directed error occurs once. Lemma~\ref{sl:weighted},
+averaged over fibers, now gives
+\[
+ D\succeq\sum_a(G_a-p_aS_a)\succeq\sum_a h_a=H.
+\]
+Using the triple estimate of Lemma~\ref{app:triple} in
+\eqref{asm:expansion} yields
+\[
+ H^2\succeq(n-2)H-(n-3)H+D\succeq2H.
+\]
+\end{proof}
+
+\begin{remark}\label{asm:weighting}
+The weights cannot be removed from Lemma~\ref{sl:weighted}: on $q=1$ slices
+with $N\ge3$, $G=S$, so $G-S\succeq h$ is false, whereas $G-pS=h$. Retaining
+$\alpha\beta=\rho^2$ in the cell square leaves the slice energy needed for
+the strengthened global bound.
+\end{remark}
+
+\subsection{Connectivity and the kernel}
+The following lemma is the connectivity lemma and kernel corollary of
+OpenAI~\cite[Lemma~7.2, Corollary~7.3]{OAI26}, whose connectivity argument
+is Havel's switching argument~\cite[Theorem~3]{Havel55}. We include the
+proof.
+
+\begin{lemma}[Connectivity and kernel]\label{asm:kernel}
+Switches connect $\Omega_d$, and $\ker H=\mathbb R\mathbf 1$.
+\end{lemma}
+\begin{proof}
+Let $R$ be the current set of unfrozen vertices, initially $V$, and write
+$d^R_w$ for the degree of $w$ in the graph induced on $R$ and $N_R(w)$ for
+its neighborhood there. Switches inside $R$ leave every residual degree
+$d^R_w$ unchanged, and hence also the prescription below. Choose the first
+vertex $v$ of $R$ by label and prescribe its neighborhood in $R$ to be the
+$d^R_v$ vertices of $R\setminus\{v\}$ of largest residual degree, breaking
+ties by label. If $i$ is an undesired current neighbor and $j$ a prescribed
+missing neighbor, then $d^R_j\ge d^R_i$. The sets
+$A=N_R(j)\setminus\{i\}$ and $B=N_R(i)\setminus\{j\}$ satisfy $|A|\ge|B|$
+and $v\in B\setminus A$. Hence some $k\in A\setminus B$ exists. These four
+vertices are distinct and $\{vi,jk\}\to\{vj,ik\}$ is a valid switch, gaining
+a prescribed neighbor without losing another. Repeat, then freeze $v$ and
+recurse. The resulting residual degree vector depends only on the preceding
+vector and the fixed prescription. Every realization therefore reaches the
+same graph. With fewer than four unfrozen vertices a discrepancy would still
+force four distinct vertices, so none occurs.
+
+Since the $h_a$ are orthogonal projections,
+$\langle f,Hf\rangle=\sum_a\lVert h_af\rVert^2$. Zero energy forces $f$ to be
+constant on every fiber and hence along every switch, by the multiplicity
+count behind \eqref{joh:multiplicity}. Connectivity proves the kernel
+statement, and constants have zero energy because $h_a\mathbf 1=0$.
+\end{proof}
+
+\begin{corollary}[Operator comparison]\label{asm:comparison}
+The operators satisfy $L\succeq H\succeq2(I-\Pi)$.
+\end{corollary}
+\begin{proof}
+By Proposition~\ref{asm:global}, the positive self-adjoint $H$ has each
+eigenvalue either zero or at least two. Lemmas~\ref{asm:kernel}
+and~\ref{joh:gap} imply $L\succeq H\succeq2(I-\Pi)$.
+\end{proof}
+
+\subsection{The prescribed chains}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Corollary~\ref{asm:comparison} and \eqref{eq:normalization},
+\[
+ I-P=\frac{L}{12\binom n4}\succeq\frac{2(I-\Pi)}{12\binom n4}
+ =\frac{I-\Pi}{6\binom n4},
+\]
+and by \eqref{eq:operators}, $I-K=H/\binom n2\succeq2(I-\Pi)/\binom n2$. Both
+kernels are symmetric and fix constants, so these are the two bounds in
+\eqref{eq:gaps}. By Proposition~\ref{shp:extremal},
+$d=(2,2,1,1,0,\ldots,0)$ has $M=2$, so Proposition~\ref{shp:two} gives
+equality in both bounds.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:mixing}]
+The case $M=1$ is immediate: the unique graph carries all of $\pi$. For
+$M>1$ and either kernel, the centered density of a point mass has squared
+norm $M-1$. Reversibility and the nonnegative spectrum give, for a valid gap
+lower bound $\gamma_0$ and every starting graph,
+\begin{equation}\label{asm:tv}
+ \|Q^t(G,\cdot)-\pi\|_{\mathrm{TV}}
+ \le\tfrac12\sqrt{M-1}(1-\gamma_0)^t
+ \le\tfrac12\sqrt{M-1}e^{-\gamma_0t}.
+\end{equation}
+Substitute $\gamma_0=1/(6\binom n4)$ or $2/\binom n2$ to obtain
+\eqref{eq:mixing}. Since $M\le2^{\binom n2}$,
+\[
+ A_{1/4}\le\left(1+\frac{n(n-1)}4\right)\log2\le n^2,
+ \qquad 6\binom n4\le\frac{n^4}{4}.
+\]
+For the second coarse constant, $n\ge4$ gives
+\[
+ \frac{\binom n2}{2}A_{1/4}
+ \le\left(\frac{n^2}{4}+\frac{n^4}{16}\right)\log2
+ =\frac{n^4}{16}(1+4/n^2)\log2\le\frac{n^4}{16}.
+\]
+Here $(1+4/n^2)\log2\le(5/4)\log2<1$, because
+$\log2=\int_1^2 dx/x<3/4$ by the trapezoidal bound for the strictly convex
+function $1/x$. Finally $\lceil x\rceil\le x+1$ proves \eqref{eq:coarse}.
+\end{proof}

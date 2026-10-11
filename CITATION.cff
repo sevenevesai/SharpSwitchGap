@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint below."
+type: software
+title: "SharpSwitchGap: sharp spectral gaps for the switch and Curveball chains on every graphical degree sequence"
+authors:
+  - family-names: Short
+    given-names: Mark T.
+    affiliation: SevenevesAI
+version: 1.0.0
+date-released: 2026-10-11
+license: MIT
+repository-code: https://github.com/sevenevesai/SharpSwitchGap
+url: https://seveneves.ai/research/
+keywords:
+  - switch chain
+  - Curveball
+  - spectral gap
+  - mixing time
+  - degree sequence
+  - graph sampling
+  - Markov chain Monte Carlo
+  - Lean 4
+  - formal verification
+preferred-citation:
+  type: unpublished
+  title: "Sharp spectral gaps for the switch and Curveball chains on every graphical degree sequence"
+  authors:
+    - family-names: Short
+      given-names: Mark T.
+      affiliation: SevenevesAI
+  year: 2026
+  notes: "Preprint. Lean verification and finite checks at https://github.com/sevenevesai/SharpSwitchGap"

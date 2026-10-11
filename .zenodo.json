@@ -1,0 +1,32 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "title": "Sharp spectral gaps for the switch and Curveball chains on every graphical degree sequence",
+  "creators": [
+    {
+      "name": "Short, Mark T.",
+      "affiliation": "SevenevesAI"
+    }
+  ],
+  "description": "<p>For every graphical degree vector on n &ge; 4 labeled vertices with more than one realization, the lazy chain that proposes switches uniformly on four vertices has spectral gap at least 1/(6 C(n,4)), and the chain that performs a uniform undirected Curveball trade on a uniformly chosen vertex pair has spectral gap at least 2/C(n,2); both constants are the worst case over all such degree vectors, for every n. Consequently the total-variation mixing times at distance 1/4 are at most n^6/4+1 for the switch chain and n^4/16+1 for the Curveball chain. Both gap bounds are kernel-checked in Lean 4, together with a total-variation bound for the switch chain. The deposit contains the manuscript, the Lean 4 verification against the pinned definitions of the OpenAI Math Release manuscript openai-math#131, and the finite numerical checks.</p>",
+  "keywords": [
+    "switch chain",
+    "Curveball",
+    "spectral gap",
+    "mixing time",
+    "degree sequence",
+    "graph sampling",
+    "Markov chain Monte Carlo",
+    "Lean 4",
+    "formal verification"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sevenevesai/SharpSwitchGap",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

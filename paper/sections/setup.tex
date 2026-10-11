@@ -1,0 +1,35 @@
+\section{Operators and pair fibers}\label{sec:setup}
+This section fixes the operator conventions and expresses both chains through
+the switch Laplacian and the pair-fiber projections. All operators act on
+real $L^2(\pi)$. Write $A\succeq B$ when $A-B$ is self-adjoint and has
+nonnegative quadratic form. Let $\Pi f=\mathbb E_\pi f$ be projection onto
+constants.
+
+Each distinct switch neighbor of a graph has transition probability
+$1/(12\binom n4)$ under $P$: the four toggled edges determine both the
+four-set and the ordered pair of removed and added matchings, so this count
+has no proposal multiplicity. If $L$ is the unnormalized Laplacian of the
+graph of distinct switch neighbors, then
+\begin{equation}\label{eq:normalization}
+ Lf(G)=\sum_{G'\sim G}(f(G)-f(G')),\qquad I-P=\frac{L}{12\binom n4}.
+\end{equation}
+
+For an unordered vertex pair $a=\{i,j\}$, its \emph{fiber} fixes all edges
+away from $a$, the edge $ij$, and each outside vertex's number of neighbors
+in $a$. The graphs in the fiber of $G$ are exactly those obtainable from $G$
+by a Curveball trade at $a$. Let $E_a$ be conditional uniform averaging on
+this fiber and put
+\begin{equation}\label{eq:operators}
+ h_a=I-E_a,\qquad H=\sum_{a\in\binom{[n]}2}h_a,\qquad
+ K=\frac{1}{\binom n2}\sum_a E_a=I-\frac{H}{\binom n2}.
+\end{equation}
+This is the partition-based heat-bath construction of Dyer, Greenhill and
+Ullrich~\cite[Definition~1.1]{DGU14}, so $E_a$ and $h_a$ are orthogonal
+projections. Thus $K$ chooses a uniform unordered pair and performs a uniform
+undirected Curveball trade~\cite{CBS18}, including the possibility of
+retaining the current assignment. No additional holding probability is
+imposed. Both kernels are symmetric and stochastic. Also $P$ has nonnegative spectrum by
+laziness, and $K$ does because it is an average of orthogonal projections.
+Section~\ref{joh:section} describes each fiber as a uniform subset slice, and
+Section~\ref{asm:section} combines the estimates for $H$ with
+\eqref{eq:normalization} and \eqref{eq:operators}.

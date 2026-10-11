@@ -1,0 +1,91 @@
+\section{Johnson comparison}\label{joh:section}
+This section describes each pair fiber as a uniform subset slice, bounds the
+pair projection $h_a$ by the exchange Laplacian of its fiber, and sums these
+bounds to obtain $H\preceq L$. The gap of the exchange Laplacian is a
+consequence of the classical Bernoulli--Laplace (Johnson) spectrum; see
+Diaconis and Shahshahani~\cite{DS87}. We give a self-contained
+local-to-global proof of the gap needed here. The identity
+$\sum_aJ_a=2L$ is that of OpenAI~\cite[Lemma~7.4]{OAI26}, with the two-trade
+count of Carstens, Berger and Strona~\cite[Lemma~2]{CBS18}; the exact gap
+replaces the factor $n^2$ in the bound $h_a\preceq n^2J_a$
+of~\cite[Lemma~7.4]{OAI26}. Section~\ref{sl:section} uses the gap on
+slices, and Section~\ref{asm:section} uses $H\preceq L$.
+
+On an $a=\{i,j\}$ fiber, let $N$ count outside vertices with exactly one
+neighbor in $a$, and let $c$ count those with two. Exactly
+$q=d_i-c-\mathbf 1_{ij\in E}$ singleton labels must be assigned to $i$.
+Every $q$-subset of the $N$ labels is allowed, since all endpoint and outside
+degrees are preserved. There is one graph per subset, so the conditional law
+is uniform. Let $\tau_{kl}$ exchange the assignments of labels $k,l$, and put
+\[
+ J_a=\sum_{k<l}(I-\tau_{kl}).
+\]
+Equal assignments give zero contributions. This is the unnormalized Johnson
+Laplacian, with each exchange neighbor counted once.
+
+\begin{lemma}[Johnson gap]\label{joh:gap}
+On a nontrivial uniform $q$-slice of $N$ labels, the gap of
+$J=\sum_{i<j}(I-\tau_{ij})$ is $N$. Consequently $h_a\preceq J_a/2$ and
+$H\preceq L$.
+\end{lemma}
+\begin{proof}
+Write $A_a=I-\tau_{ij}$ for a label pair $a=\{i,j\}$, so $A_a/2$ is an
+orthogonal projection and $A_a^2=2A_a$. Suppose first that $N\ge3$.
+For each label triple $T$ set $J_T=\sum_{a\subset T,\,|a|=2}A_a$.
+Fixing the subset outside $T$ leaves either one assignment, when zero or
+three labels of $T$ are occupied, or three assignments, when one or two
+are occupied. On the latter orbit $J_T$ is the triangle Laplacian
+$3I-\mathbf 1\mathbf 1^{\mathsf T}$; on the former it is zero. Therefore
+\[
+ J_T^2=3J_T,\qquad \sum_{|T|=3}J_T=(N-2)J.
+\]
+Swaps of disjoint label pairs commute, so $A_aA_b$ is positive
+semidefinite when $a\cap b=\varnothing$: it is four times the product
+of two commuting orthogonal projections. Define the ordered remainder
+\[
+ R_J=\sum_{\substack{a,b\in\binom{[N]}2\\a\cap b=\varnothing}}A_aA_b
+ \succeq0.
+\]
+In the sum of triple squares, each $A_a^2$ occurs $N-2$ times and each
+ordered intersecting pair of distinct label pairs occurs once. Expanding
+$J^2$ and using $A_a^2=2A_a$ gives
+\[
+ \begin{aligned}
+ J^2&=\sum_{|T|=3}J_T^2-2(N-3)J+R_J\\
+    &=3(N-2)J-2(N-3)J+R_J=NJ+R_J\succeq NJ.
+ \end{aligned}
+\]
+For $N=2$ the only nontrivial slice has $q=1$, and $J^2=2J=NJ$ directly.
+Thus every positive eigenvalue of the positive self-adjoint $J$ is at least
+$N$. Moreover,
+\[
+ \langle f,Jf\rangle=\tfrac12\sum_{i<j}\lVert f-\tau_{ij}f\rVert^2.
+\]
+Zero energy forces invariance under every label transposition. Such
+transpositions connect all $q$-subsets, so $\ker J=\mathbb R\mathbf 1$.
+Finally, with $x_i$ the membership indicator of label $i$, direct summation
+gives $Jx_i=\sum_{j\ne i}(x_i-x_j)=Nx_i-q$. Since $1\le q<N$,
+$x_i-q/N$ is a nonzero centered eigenfunction with eigenvalue $N$.
+The gap is therefore exactly $N$.
+
+On a nontrivial fiber $N\ge2$, so $h_a\preceq J_a/N\preceq J_a/2$;
+on one-state fibers both operators vanish. Every switch is realized by
+exactly two singleton exchanges: their indexing pairs are the two parts of
+the unique bipartition of its toggled four-cycle. For each indexing pair the
+outside labels are determined. Conversely, exchanging a label $k$ assigned
+to $i$ with a label $l$ assigned to $j$ toggles exactly the four edges
+$ik,jl,il,jk$, which is a valid switch, so every nontrivial singleton
+exchange is a switch. Thus, by off-diagonal entries and zero row sums,
+\begin{equation}\label{joh:multiplicity}
+ \sum_a J_a=2L,\qquad H\preceq\tfrac12\sum_aJ_a=L.
+\end{equation}
+\end{proof}
+
+\begin{remark}
+The Johnson proof has the same local-to-global shape as the argument for
+$H^2\succeq2H$: a triple square identity or inequality, a regrouping of
+interactions, and a constant-kernel argument. Disjoint label swaps commute,
+making $R_J$ positive directly. Disjoint graph-pair resamplings need not
+commute; Sections~\ref{cell:section}--\ref{asm:section} control their
+interaction by the weighted estimates.
+\end{remark}

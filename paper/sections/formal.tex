@@ -1,0 +1,123 @@
+\section{Formal verification}\label{fv:section}
+The two gap lower bounds of Theorem~\ref{thm:main} and a weaker
+total-variation bound for $P$ are checked in Lean~4 with Mathlib. The switch
+statements use the definitions of the Lean formalization accompanying
+\cite{OAI26} at commit \texttt{adc7f1241b42e322a6451854ab7e4b4c146bf78a},
+unchanged. The toolchain pins are as follows.
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Lean & \texttt{leanprover/lean4:v4.34.1}\\
+Mathlib & \texttt{d13f23b723b8a846827a245b89c10fc7d3f11612}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Switch contracts.}
+The file \texttt{Statement.lean} imports only the pinned definitions and
+states two contracts. Both assume $n\ge4$, a degree vector $d$ with
+$d_v\le n-1$ for every $v$, $d$ graphical, and $M>1$, where $\Omega_d$ is the
+pinned state space \texttt{GraphState}~$n$~$d$ and $M$ is
+\texttt{stateCount}~$n$~$d$. Let $P$ be the pinned \texttt{switchKernel},
+$\operatorname{Var}_\pi$ the pinned \texttt{uniformVariance}, and
+$\mathcal E_P(f)=\langle f,(I-P)f\rangle$ the pinned \texttt{dirichletEnergy}.
+The contracts read
+\begin{gather*}
+ \frac{1}{6\binom n4}\operatorname{Var}_\pi(f)\le\mathcal E_P(f)
+ \quad\text{for every }f\colon\Omega_d\to\mathbb R,\\
+ \|P^t(G,\cdot)-\pi\|_{\mathrm{TV}}
+ \le\frac{\sqrt M}{2}\exp\Bigl(-\frac{t}{6\binom n4}\Bigr)
+ \quad\text{for every }t\in\mathbb Z_{\ge0}\text{ and }G\in\Omega_d.
+\end{gather*}
+The pinned gap predicate is this Poincar\'e form: $\gamma$ times the
+variance is at most the Dirichlet energy for every $f$. For a reversible
+kernel the largest such $\gamma$ is $1-\lambda_2$, so the first contract is
+the switch bound in \eqref{eq:gaps}. The second contract has prefactor
+$\sqrt M/2$, weaker than the $\sqrt{M-1}/2$ of \eqref{asm:tv}. The theorems
+\texttt{SharpSwitchGap.\allowbreak switch\_chain\_gap} and
+\texttt{SharpSwitchGap.\allowbreak switch\_chain\_tv\_bound} prove the two
+statements, the latter by the general gap-to-total-variation argument of the
+upstream formalization. The theorems
+\texttt{SharpSwitchGap.\allowbreak Baseline.\allowbreak sharp\_gap} and
+\texttt{SharpSwitchGap.\allowbreak Baseline.\allowbreak sharp\_tv\_bound}
+check these proofs against the two contracts. A synchronization script verifies the Git blob hash of
+every copied upstream file and matches the definitions and upstream theorem
+types against the pinned upstream statements.
+
+\paragraph{Curveball contract.}
+The project defines the Curveball kernel \texttt{Curveball.kernel} on the
+pinned state space: it chooses a uniform unordered pair and then a
+uniform state among the pinned \texttt{fiberStates} of that pair, the current
+state included. Both identities in \eqref{eq:operators} are proved by the
+theorems \texttt{kernel\_apply} and \texttt{operator\_average};
+further theorems prove that the kernel is nonnegative, stochastic and
+symmetric, and that its operator is positive semidefinite. With
+$\mathcal E_K(f)=\langle f,(I-K)f\rangle$, the theorem \texttt{Curveball.gap}
+proves, for $n\ge4$ and graphical $d$,
+\[
+ \frac{2}{\binom n2}\operatorname{Var}_\pi(f)\le\mathcal E_K(f)
+ \quad\text{for every }f\colon\Omega_d\to\mathbb R.
+\]
+The Curveball kernel and its energy and gap predicates are defined in this
+project on the pinned graph space rather than taken from upstream, so this
+contract rests on a larger trusted base than the switch contracts.
+
+\paragraph{Checked argument.}
+Table~\ref{fv:declarations} lists the intermediate results of the checked
+argument. The triple estimate $H_T^2\succeq H_T$ enters as the pinned
+upstream formal result; the proofs in Appendix~\ref{app:section} are not
+separately formalized. The audited endpoints depend only on the axioms
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+Statement & Lean declaration\\
+\midrule
+$H\preceq L$ (Lemma~\ref{joh:gap}) &
+\texttt{SharpSwitchGap.SharpComparison.generator\_le\_laplacian}\\
+Lemma~\ref{sl:weighted} &
+\texttt{SharpSwitchGap.WeightedSlice.weighted\_centered}\\
+Lemma~\ref{cell:interaction}, summed over cells &
+\texttt{SharpSwitchGap.WeightedCell.actual\_named\_interaction}\\
+$D\succeq H$ &
+\texttt{SharpSwitchGap.SharpAssembly.disjoint\_ge\_generator}\\
+$H^2\succeq2H$ &
+\texttt{SharpSwitchGap.SharpAssembly.generator\_square}\\
+$H\succeq2(I-\Pi)$ &
+\texttt{SharpSwitchGap.SharpAssembly.centered\_poincare}\\
+\bottomrule
+\end{tabular}
+\caption{Intermediate results and the Lean declarations that check them.}
+\label{fv:declarations}
+\end{table}
+
+\paragraph{Reproduction.}
+With the Lean toolchain available, run the following from the \texttt{lean}
+directory of the repository at \url{https://github.com/sevenevesai/SharpSwitchGap}.
+\begin{verbatim}
+python verify_vendor.py
+lake exe cache get
+lake build
+lake env lean SharpSwitchGap/B5Checks.lean
+lake env lean SharpSwitchGap/B4Checks.lean
+\end{verbatim}
+The first command checks the vendored upstream files against the Git blob
+hashes of the pinned commit. The two audits print the axiom dependencies of
+the Curveball and switch endpoints and of the two contract checks. Success
+means exit code zero, no \texttt{sorry} diagnostic, and only the three axioms
+above in every printed dependency list.
+
+\paragraph{Not formalized.}
+The following results of the paper are not formalized:
+\begin{itemize}
+\item the equality cases, Propositions~\ref{shp:two} and~\ref{shp:extremal};
+\item the exact Johnson gap equality in Lemma~\ref{joh:gap}; the lower bound
+ is checked;
+\item the $\sqrt{M-1}/2$ prefactor in \eqref{asm:tv}; the checked switch
+ contract uses $\sqrt M/2$ with the same gap constant;
+\item a total-variation estimate for the Curveball chain $K$;
+\item the mixing-time bounds of Corollary~\ref{cor:mixing}.
+\end{itemize}

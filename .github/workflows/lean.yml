@@ -1,0 +1,36 @@
+name: Lean verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify vendored upstream files against the pinned commit
+        run: python3 lean/verify_vendor.py --fetch
+
+      - name: Build with the pinned toolchain and Mathlib cache
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: lean
+          use-mathlib-cache: true
+          build: true
+          test: false
+          lint: false
+
+      - name: Audit axioms of the checked endpoints
+        working-directory: lean
+        run: |
+          lake env lean SharpSwitchGap/B5Checks.lean | tee b5.txt
+          lake env lean SharpSwitchGap/B4Checks.lean | tee b4.txt
+          grep 'depends on axioms' b5.txt b4.txt > audits.txt
+          test "$(wc -l < audits.txt)" -eq 13
+          ! grep -v -F '[propext, Classical.choice, Quot.sound]' audits.txt
+          ! grep -q -i 'sorry' b5.txt b4.txt

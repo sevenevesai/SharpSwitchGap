@@ -1,0 +1,129 @@
+\section{Weighted cell inequality}\label{cell:section}
+This section bounds the interaction $h_ah_b+h_bh_a$ of two disjoint pair
+resamplings from below. The proof follows the disjoint-pair proposition of
+OpenAI~\cite[Proposition~5.1]{OAI26} except for the final weighted square.
+The new ingredient is the fiber-constant weight $p_a$ on the error terms,
+which retains the identity $\alpha\beta=\rho^2$ in that square. Section~\ref{asm:section} sums the lemma over disjoint pairs
+and pays for the error terms with Lemma~\ref{sl:weighted}.
+
+On an $a$-fiber with parameters $(N,q)$ define the fiber-constant multiplier
+\begin{equation}\label{cell:p}
+ p_a=\frac{q(q-1)+(N-q)(N-q-1)}{N(N-1)}\quad(N\ge2),
+ \qquad p_a=0\quad(N\le1).
+\end{equation}
+It is the probability that two distinct singleton labels have equal
+assignments. For disjoint $a,b$, let $T_{a,b}$ toggle the cross square
+between $a$ and $b$ when it is alternating, and fix the graph otherwise. It is
+a measure-preserving involution. Set $g_{a,b}=(I-T_{a,b})/2=g_{b,a}$, an
+orthogonal projection. Let $R_{a,b}$ act on each $a$-fiber as projection onto
+the centered indicator that the two labels of $b$ have equal assignments; it
+is zero unless both are singletons, and also zero if that centered indicator
+vanishes. Consequently $p_aR_{a,b}$ is self-adjoint and positive
+semidefinite.
+
+\begin{lemma}[Weighted disjoint-pair interaction]\label{cell:interaction}
+For disjoint vertex pairs $a,b$,
+\begin{equation}\label{cell:bound}
+ h_ah_b+h_bh_a\succeq2g_{a,b}-p_aR_{a,b}-p_bR_{b,a}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $a=\{i,j\}$, $b=\{k,l\}$. Partition graphs into cells by fixing the
+graph outside these four vertices, the edges $ij,kl$, and each outside
+vertex's separate neighbor counts in $a$ and $b$. Both updates preserve these
+data. Let $A_0,B_0$ be the two outside singleton sets. After subtracting fixed
+double-neighbor and internal-edge contributions, let $q_0,q_1$ be the residual
+degrees of $i,k$. A cell is exactly the equally likely encodings
+$(F,U,W)$, where $F$ is a binary $2\times2$ cross matrix of fixed total $s$,
+$r,c$ are its first row and first column sums, and
+\[
+ U\subseteq A_0,\quad |U|=q_0-r,\qquad
+ W\subseteq B_0,\quad |W|=q_1-c.
+\]
+The total $s$ is fixed by the sum of the degrees in $a$. The displayed
+conditions enforce the first endpoint degrees; the second endpoint degrees
+then follow from the totals. All outside degrees are fixed as well.
+Even if $A_0,B_0$ overlap, their assignments use distinct edges and impose no
+additional constraint. This proves the claimed bijection and uniform law.
+
+Within a cell the full $a$-fiber signature is $X=(c,W)$ and the full
+$b$-fiber signature is $Y=(r,U)$. Let $\mathcal A,\mathcal B$ be their
+function spaces, including constants, and
+$\mathcal J=(\mathcal A+\mathcal B)^\perp$. The cross involution preserves
+$X,Y$, so $\operatorname{ran}g_{a,b}\subseteq\mathcal J$ and
+$P_{\mathcal J}\succeq g_{a,b}$.
+
+\paragraph{Product cases.}
+For $s=0,4$ the cross matrix is fixed. For $s=1,3$, its unique one or unique
+zero is determined by independent row and column choices and the subset
+weights factor. Thus $X,Y$ have a product law in these cases. For $s=2$ the
+cross-matrix multiplicities are
+\begin{equation}\label{cell:crossmatrix}
+ (m_{rc})_{r,c=0}^2=\begin{pmatrix}0&1&0\\1&2&1\\0&1&0\end{pmatrix}.
+\end{equation}
+Set $\Delta_r=\{r\ne1\}$ and $\Delta_c=\{c\ne1\}$; they are disjoint. If either event
+is absent, one total is fixed and the remaining weights factor, again giving
+a product law. In every product case the conditional projections commute,
+their product is projection onto constants, and $h_ah_b=P_{\mathcal J}$. This
+proves \eqref{cell:bound} there.
+
+\paragraph{The rank-one case.}
+In the remaining case put $p_r=\Pr(\Delta_r)>0$ and $p_c=\Pr(\Delta_c)>0$.
+The occurrence of $\Delta_c$ ensures a feasible $U$ of size $q_0-1$, and that of
+$\Delta_r$ ensures a feasible $W$ of size $q_1-1$. Hence the central cross matrices
+are feasible, and $p_r+p_c<1$. Define
+\[
+ u=\frac{\mathbf 1_{\Delta_c}-p_c}{\sqrt{p_c(1-p_c)}},\quad
+ v=\frac{\mathbf 1_{\Delta_r}-p_r}{\sqrt{p_r(1-p_r)}},\quad
+ \langle u,v\rangle=-\rho=-\sqrt{\frac{p_cp_r}{(1-p_c)(1-p_r)}}.
+\]
+In particular $0<\rho<1$. Conditional on $X=(c,W)$, the weight of each
+feasible $(r,U)$ is proportional to $m_{rc}$, with normalizer
+$\sum_t\binom{|A_0|}{q_0-t}m_{tc}$. By \eqref{cell:crossmatrix} this
+conditional law depends only on whether $c=1$; the reverse statement holds
+for $r$. The centered correlation therefore has rank one:
+$E_av=-\rho u$, $E_bu=-\rho v$. The centered parts of $\mathcal A$ orthogonal
+to $u$, and of $\mathcal B$ orthogonal to $v$, are orthogonal to the opposite
+space. They, constants, $\operatorname{span}(u,v)$, and $\mathcal J$ form an
+orthogonal invariant decomposition.
+
+The interaction is zero on constants and those remaining row spaces, and is
+$2I$ on $\mathcal J$. On the plane write the component of a general $f$ as
+$xu+yv$. Its interaction quadratic form is
+\[
+ \Phi(f)=2\langle h_a(xu+yv),h_b(xu+yv)\rangle
+       =2xy\rho(1-\rho^2),
+\]
+and its defect images are $y(v+\rho u)$ and $x(u+\rho v)$, with squared norms
+$y^2(1-\rho^2)$ and $x^2(1-\rho^2)$.
+
+\paragraph{The weighted square.}
+The line spanned by $v+\rho u$ lies in $\operatorname{ran}R_{a,b}$: it
+vanishes for $c\ne1$, and on each $c=1$ fiber it is a multiple of the centered
+equal-assignment indicator. The analogous assertion holds for $u+\rho v$ and
+$R_{b,a}$. Because these lines lie in the plane, orthogonal components of the
+full $f$ do not affect its projection onto them. Therefore
+\[
+ \lVert R_{a,b}f\rVert^2\ge y^2(1-\rho^2),\qquad
+ \lVert R_{b,a}f\rVert^2\ge x^2(1-\rho^2).
+\]
+Every fiber supporting $R_{a,b}$ has $(N,q)=(|A_0|+2,q_0)$. Hence $p_a$
+takes the value
+\[
+ \alpha:=\Pr(\Delta_r\mid c=1)=\frac{p_r}{1-p_c}
+\]
+on every $a$-fiber where $R_{a,b}$ is nonzero, and $p_b$ takes the value
+$\beta:=p_c/(1-p_r)$ on every $b$-fiber where $R_{b,a}$ is nonzero.
+Indeed $c=1$ makes both labels of $b$ singletons in the $a$-fiber, and they
+have equal assignments exactly when $r\ne1$. The uniform slice probability
+is precisely \eqref{cell:p}, independently of $W$. Now $\alpha\beta=\rho^2$,
+so
+\begin{align*}
+ \Phi(f)+\langle f,p_aR_{a,b}f\rangle+\langle f,p_bR_{b,a}f\rangle
+ &\ge(1-\rho^2)(2\rho xy+\alpha y^2+\beta x^2)\\
+ &=(1-\rho^2)(\sqrt\beta x+\sqrt\alpha y)^2\ge0.
+\end{align*}
+The remaining contribution $2\lVert P_{\mathcal J}f\rVert^2$ is at least
+$2\lVert g_{a,b}f\rVert^2$. This proves the inequality on every cell and
+hence globally.
+\end{proof}

@@ -1,0 +1,7 @@
+import SharpSwitchGap.WeightedCell
+
+#print axioms SharpSwitchGap.GraphCellWeights.left_weight_eq_ratio
+#print axioms SharpSwitchGap.GraphCellWeights.right_weight_eq_ratio
+#print axioms SharpSwitchGap.WeightedError.norm_sq_eq_weighted_form
+#print axioms SharpSwitchGap.WeightedCell.cell_bound
+#print axioms SharpSwitchGap.WeightedCell.actual_named_interaction

@@ -1,0 +1,4 @@
+# Keep exact LF blobs on every platform so lean/vendor/ hashes verify after checkout.
+* text=auto eol=lf
+*.pdf binary
+*.ps1 text eol=crlf

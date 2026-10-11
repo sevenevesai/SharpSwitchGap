@@ -1,0 +1,108 @@
+=== sync_vendor 2026-10-11T09:33:28.7160471+02:00
+PASS: 177 pinned OAI blobs, 986,205 bytes
+External imports: ['Mathlib']; outside SwitchChain: []
+PASS: Comparator definitions and all three theorem types match (whitespace normalized)
+sync exit 0
+=== check_fresh B5 2026-10-11T09:33:31.4076468+02:00
+ℹ [8971/9138] Built SharpSwitchGap.WeightedScalars (258s)
+info: SharpSwitchGap/WeightedScalars.lean:97:0: 'SharpSwitchGap.WeightedScalars.linear_slack_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:98:0: 'SharpSwitchGap.WeightedScalars.quadratic_slack_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:99:0: 'SharpSwitchGap.WeightedScalars.cell_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:100:0: 'SharpSwitchGap.WeightedScalars.weighted_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8974/9138] Built SharpSwitchGap.WeightedGram (258s)
+info: SharpSwitchGap/WeightedGram.lean:95:0: 'SharpSwitchGap.WeightedGram.range_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedGram.lean:96:0: 'SharpSwitchGap.WeightedGram.extend_from_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8980/9138] Built SharpSwitchGap.LocalToGlobal (257s)
+✔ [9009/9138] Built SharpSwitchGap.JohnsonLocal (258s)
+✔ [9038/9138] Built SharpSwitchGap.Statement (18s)
+✔ [9039/9138] Built SharpSwitchGap.Compression (18s)
+✔ [9056/9138] Built SharpSwitchGap.JohnsonGap (19s)
+ℹ [9097/9138] Built SharpSwitchGap.WeightedInteraction (23s)
+info: SharpSwitchGap/WeightedInteraction.lean:88:0: 'SharpSwitchGap.WeightedInteraction.rank_one_disjoint_interaction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [9103/9138] Built SharpSwitchGap.CellWeights (19s)
+✔ [9107/9138] Built SharpSwitchGap.JohnsonTransport (18s)
+ℹ [9110/9138] Built SharpSwitchGap.WeightedSliceRange (20s)
+info: SharpSwitchGap/WeightedSliceRange.lean:96:0: 'SharpSwitchGap.WeightedSliceRange.weighted_on_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9112/9138] Built SharpSwitchGap.WeightedCentering (19s)
+✔ [9113/9138] Built SharpSwitchGap.GraphCellWeights (18s)
+✔ [9114/9138] Built SharpSwitchGap.SharpComparison (18s)
+ℹ [9115/9138] Built SharpSwitchGap.WeightedSlice (18s)
+info: SharpSwitchGap/WeightedSlice.lean:114:0: 'SharpSwitchGap.WeightedSlice.weighted_of_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9116/9138] Built SharpSwitchGap.AffinePlane (18s)
+✔ [9117/9138] Built SharpSwitchGap.GraphCellCompression (18s)
+ℹ [9118/9138] Built SharpSwitchGap.PartialChecks (18s)
+info: SharpSwitchGap/PartialChecks.lean:5:0: 'SharpSwitchGap.WeightedSliceRange.weighted_on_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/PartialChecks.lean:6:0: 'SharpSwitchGap.WeightedSlice.weighted_of_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/PartialChecks.lean:7:0: 'SharpSwitchGap.WeightedInteraction.rank_one_disjoint_interaction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9119/9138] Built SharpSwitchGap.B1Checks (18s)
+info: SharpSwitchGap/B1Checks.lean:4:0: 'SharpSwitchGap.Johnson.centered_poincare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:5:0: 'SharpSwitchGap.WeightedSlice.residual_johnson_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:6:0: 'SharpSwitchGap.WeightedSlice.weighted_centered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:7:0: 'SharpSwitchGap.SharpComparison.generator_le_laplacian' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9120/9138] Built SharpSwitchGap.WeightedSliceTransport (18s)
+✔ [9121/9138] Built SharpSwitchGap.EventPlane (18s)
+✔ [9122/9138] Built SharpSwitchGap.WeightedError (16s)
+✔ [9123/9138] Built SharpSwitchGap.CrossCellPlane (17s)
+✔ [9124/9138] Built SharpSwitchGap.WeightedFiberBudget (18s)
+✔ [9125/9138] Built SharpSwitchGap.GraphCellPlane (17s)
+✔ [9126/9138] Built SharpSwitchGap.WeightedGlobalBudget (16s)
+✔ [9127/9138] Built SharpSwitchGap.WeightedCell (16s)
+ℹ [9128/9138] Built SharpSwitchGap.B2Checks (16s)
+info: SharpSwitchGap/B2Checks.lean:3:0: 'SharpSwitchGap.GraphCellWeights.left_weight_eq_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:4:0: 'SharpSwitchGap.GraphCellWeights.right_weight_eq_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:5:0: 'SharpSwitchGap.WeightedError.norm_sq_eq_weighted_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:6:0: 'SharpSwitchGap.WeightedCell.cell_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:7:0: 'SharpSwitchGap.WeightedCell.actual_named_interaction' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9129/9138] Built SharpSwitchGap.WeightedPairs (17s)
+✔ [9130/9138] Built SharpSwitchGap.SharpAssembly (16s)
+ℹ [9131/9138] Built SharpSwitchGap.B3Checks (17s)
+info: SharpSwitchGap/B3Checks.lean:3:0: 'SharpSwitchGap.WeightedPairs.pair_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:4:0: 'SharpSwitchGap.SharpAssembly.disjoint_ge_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:5:0: 'SharpSwitchGap.SharpAssembly.generator_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:6:0: 'SharpSwitchGap.SharpAssembly.centered_poincare' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9132/9138] Built SharpSwitchGap.Main (19s)
+ℹ [9133/9138] Built SharpSwitchGap.Baseline (17s)
+info: SharpSwitchGap/Baseline.lean:35:0: 'OAI.Problem315.switch_chain_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/Baseline.lean:36:0: 'OAI.Problem315.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/Baseline.lean:37:0: 'OAI.Problem315.switch_connectivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9134/9138] Built SharpSwitchGap.Curveball (24s)
+ℹ [9135/9138] Built SharpSwitchGap.B4Checks (15s)
+info: SharpSwitchGap/B4Checks.lean:3:0: 'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:4:0: 'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:5:0: 'SharpSwitchGap.Baseline.sharp_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:6:0: 'SharpSwitchGap.Baseline.sharp_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9136/9138] Built SharpSwitchGap.B5Checks (15s)
+info: SharpSwitchGap/B5Checks.lean:3:0: 'SharpSwitchGap.Curveball.kernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:4:0: 'SharpSwitchGap.Curveball.operator_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:5:0: 'SharpSwitchGap.Curveball.kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:6:0: 'SharpSwitchGap.Curveball.kernel_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:7:0: 'SharpSwitchGap.Curveball.kernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:8:0: 'SharpSwitchGap.Curveball.operator_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:9:0: 'SharpSwitchGap.Curveball.gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:10:0: 'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:11:0: 'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9137/9138] Built SharpSwitchGap (14s)
+Build completed successfully (9138 jobs).
+Fresh lake build: exit 0, 625.86 s
+'SharpSwitchGap.Curveball.kernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.operator_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.operator_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Axiom audit: exit 0, 19.97 s
+check_fresh exit 0
+=== B4Checks 2026-10-11T09:44:17.3234310+02:00
+'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Baseline.sharp_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Baseline.sharp_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+B4 exit 0
+=== done 2026-10-11T09:44:37.5331399+02:00
