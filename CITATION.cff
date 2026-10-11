@@ -10,6 +10,7 @@ version: 1.0.0
 date-released: 2026-10-11
 license: MIT
 repository-code: https://github.com/sevenevesai/SharpSwitchGap
+doi: 10.5281/zenodo.23295359
 url: https://seveneves.ai/research/
 keywords:
   - switch chain
@@ -29,4 +30,5 @@ preferred-citation:
       given-names: Mark T.
       affiliation: SevenevesAI
   year: 2026
+  doi: 10.5281/zenodo.23295359
   notes: "Preprint. Lean verification and finite checks at https://github.com/sevenevesai/SharpSwitchGap"

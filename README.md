@@ -1,5 +1,7 @@
 # SharpSwitchGap
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23295359.svg)](https://doi.org/10.5281/zenodo.23295359)
+
 Sharp spectral gaps for the switch and Curveball chains on every graphical degree sequence:
 the manuscript, its Lean 4 verification, and the finite numerical checks.
 
@@ -137,7 +139,8 @@ written proofs in the paper.
   author       = {Mark T. Short},
   title        = {Sharp spectral gaps for the switch and {C}urveball chains on every graphical degree sequence},
   year         = {2026},
-  howpublished = {Preprint, \url{https://github.com/sevenevesai/SharpSwitchGap}}
+  howpublished = {Preprint, \url{https://github.com/sevenevesai/SharpSwitchGap}},
+  doi          = {10.5281/zenodo.23295359}
 }
 ```
 
