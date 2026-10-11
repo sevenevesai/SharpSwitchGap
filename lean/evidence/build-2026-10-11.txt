@@ -1,0 +1,351 @@
+=== cache get 2026-10-11T10:15:01.5214435+02:00
+lake.exe : info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+At line:1 char:644
++ ...  -FilePath $log -Encoding utf8; & lake exe cache get *>> $log; "cache ...
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (info: mathlib: ...ty/mathlib4.git:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+✔ [1/5] Built Cache.Cli (747ms)
+✔ [2/5] Built Cache.Lean (830ms)
+✔ [6/42] Built Cache.Env (808ms)
+✔ [7/42] Built Cache.Cli:c.o (832ms)
+✔ [8/42] Built Cache.Lean:c.o (832ms)
+✔ [9/42] Built Cache.Env:c.o (103ms)
+✔ [10/42] Built Batteries.Tactic.OpenPrivate (1.6s)
+✔ [11/42] Built Cache.Infra (824ms)
+✔ [12/42] Built Cache.Infra:c.o (140ms)
+✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.8s)
+✔ [14/42] Built Cache.IO (1.8s)
+✔ [15/42] Built Cache.Hashing (1.4s)
+✔ [16/42] Built Cache.IO:c.o (1.3s)
+✔ [17/42] Built Cache.Hashing:c.o (1.9s)
+✔ [18/42] Built Cache.Requests (1.9s)
+✔ [19/42] Built Cache.Marker (1.3s)
+✔ [20/42] Built Cache.Requests:c.o (1.4s)
+✔ [21/42] Built Cache.Upload.Dest (1.4s)
+✔ [22/42] Built Cache.Query (1.4s)
+✔ [23/42] Built Cache.Marker:c.o (1.4s)
+✔ [24/42] Built Cache.Query:c.o (185ms)
+✔ [25/42] Built Cache.Upload.Curl (1.4s)
+✔ [26/42] Built Cache.Upload.Rclone (1.4s)
+✔ [27/42] Built Cache.Upload.Dest:c.o (1.4s)
+✔ [28/42] Built Cache.Warning (1.4s)
+✔ [29/42] Built Cache.Warning:c.o (157ms)
+✔ [30/42] Built Cache.Upload.Azure (1.3s)
+✔ [31/42] Built Cache.Upload.Curl:c.o (1.3s)
+✔ [32/42] Built Cache.Upload.Rclone:c.o (1.3s)
+✔ [33/42] Built Cache.Upload.Azure:c.o (90ms)
+✔ [34/42] Built Cache.Upload.S3 (1.4s)
+✔ [35/42] Built Cache.Upload.Defs (1.3s)
+✔ [36/42] Built Cache.Upload.S3:c.o (1.2s)
+✔ [37/42] Built Cache.Upload.Defs:c.o (1.2s)
+✔ [38/42] Built Cache.Upload (1.2s)
+✔ [39/42] Built Cache.Main (1.5s)
+✔ [40/42] Built Cache.Upload:c.o (1.5s)
+✔ [41/42] Built Cache.Main:c.o (539ms)
+✔ [42/42] Built cache:exe (3.0s)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8907 already-cached file(s) (1 already decompressed)
+No files to download
+Decompressed 8907 already-cached file(s)
+Completed successfully in 93208 ms!
+cache exit 0
+=== lake build 2026-10-11T10:18:44.4758710+02:00
+✔ [8924/9138] Built OAI.Probability.SwitchChain.InitialTV (17s)
+✔ [8925/9138] Built OAI.Probability.SwitchChain.FiniteKernelAlgebra (18s)
+✔ [8926/9138] Built OAI.Probability.SwitchChain.ProjectionTools (18s)
+✔ [8927/9138] Built OAI.Probability.SwitchChain.MixingArithmetic (18s)
+✔ [8928/9138] Built OAI.Probability.SwitchChain.HavelInduction (16s)
+✔ [8929/9138] Built OAI.Probability.SwitchChain.NeighborAlignment (17s)
+✔ [8930/9138] Built OAI.Probability.SwitchChain.SwitchWitness (17s)
+✔ [8931/9138] Built OAI.Probability.SwitchChain.TripleProjectionBridge (17s)
+✔ [8932/9138] Built OAI.Probability.SwitchChain.CountEigenvalue (16s)
+✔ [8933/9138] Built OAI.Probability.SwitchChain.FiberLabelCounting (16s)
+✔ [8934/9138] Built OAI.Probability.SwitchChain.CountCoupling (16s)
+✔ [8935/9138] Built OAI.Probability.SwitchChain.WeightedConditionalVariance (18s)
+✔ [8936/9138] Built OAI.Probability.SwitchChain.FixedBlockPartitions (17s)
+✔ [8937/9138] Built OAI.Probability.SwitchChain.EnergyTransfer (17s)
+✔ [8938/9138] Built OAI.Probability.SwitchChain.SpectralFromSquare (16s)
+✔ [8939/9138] Built OAI.Probability.SwitchChain.FrameSynthesis (19s)
+✔ [8940/9138] Built OAI.Probability.SwitchChain.UnorderedPairSums (12s)
+✔ [8941/9138] Built OAI.Probability.SwitchChain.PairAggregation (13s)
+✔ [8942/9138] Built OAI.Probability.SwitchChain.SliceGramScalars (13s)
+✔ [8943/9138] Built OAI.Probability.SwitchChain.PairOrbit (12s)
+✔ [8944/9138] Built OAI.Probability.SwitchChain.SliceBounds (13s)
+✔ [8945/9138] Built OAI.Probability.SwitchChain.SliceGenerator (13s)
+✔ [8946/9138] Built OAI.Probability.SwitchChain.SliceEuclideanGenerator (13s)
+✔ [8947/9138] Built OAI.Probability.SwitchChain.GramComparison (14s)
+✔ [8948/9138] Built OAI.Probability.SwitchChain.SliceCoefficientAlgebra (14s)
+✔ [8949/9138] Built OAI.Probability.SwitchChain.DisjointIndicators (14s)
+ℹ [8950/9138] Built SharpSwitchGap.WeightedGram (14s)
+info: SharpSwitchGap/WeightedGram.lean:95:0: 'SharpSwitchGap.WeightedGram.range_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedGram.lean:96:0: 'SharpSwitchGap.WeightedGram.extend_from_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8951/9138] Built SharpSwitchGap.WeightedScalars (15s)
+info: SharpSwitchGap/WeightedScalars.lean:97:0: 'SharpSwitchGap.WeightedScalars.linear_slack_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:98:0: 'SharpSwitchGap.WeightedScalars.quadratic_slack_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:99:0: 'SharpSwitchGap.WeightedScalars.cell_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/WeightedScalars.lean:100:0: 'SharpSwitchGap.WeightedScalars.weighted_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8952/9138] Built OAI.Probability.SwitchChain.SliceEquality (17s)
+✔ [8953/9138] Built OAI.Probability.SwitchChain.RankOneInteraction (17s)
+✔ [8954/9138] Built OAI.Probability.SwitchChain.SliceMoments (17s)
+✔ [8955/9138] Built OAI.Probability.SwitchChain.TransitiveAverage (16s)
+✔ [8956/9138] Built OAI.Probability.SwitchChain.PermutationFactors (16s)
+✔ [8957/9138] Built OAI.Probability.SwitchChain.BinaryAssignments (16s)
+✔ [8958/9138] Built OAI.Probability.SwitchChain.PermutationPathComparison (17s)
+✔ [8959/9138] Built OAI.Probability.SwitchChain.DisjointEncoding (16s)
+✔ [8960/9138] Built OAI.Probability.SwitchChain.Definitions (15s)
+✔ [8961/9138] Built OAI.Probability.SwitchChain.CrossMatrix (17s)
+✔ [8962/9138] Built OAI.Probability.SwitchChain.CrossCovariance (17s)
+✔ [8963/9138] Built OAI.Probability.SwitchChain.FiniteCellProjection (17s)
+✔ [8964/9138] Built OAI.Probability.SwitchChain.CountCovering (17s)
+✔ [8965/9138] Built OAI.Probability.SwitchChain.PermutationGenerator (17s)
+✔ [8966/9138] Built OAI.Probability.SwitchChain.TripleCountLaw (18s)
+✔ [8967/9138] Built OAI.Probability.SwitchChain.FixedBlockCount (17s)
+✔ [8968/9138] Built OAI.Probability.SwitchChain.BinaryColumnPartitions (15s)
+✔ [8969/9138] Built SharpSwitchGap.LocalToGlobal (15s)
+✔ [8970/9138] Built OAI.Probability.SwitchChain.FiniteKernelTV (16s)
+✔ [8971/9138] Built SharpSwitchGap.JohnsonLocal (16s)
+✔ [8972/9138] Built OAI.Probability.SwitchChain.SliceGeneratorSampling (12s)
+✔ [8973/9138] Built OAI.Probability.SwitchChain.SliceGramConstant (12s)
+✔ [8974/9138] Built OAI.Probability.SwitchChain.SliceGramAction (13s)
+✔ [8975/9138] Built OAI.Probability.SwitchChain.SliceSynthesis (13s)
+✔ [8976/9138] Built OAI.Probability.SwitchChain.FiniteEventVectors (13s)
+✔ [8977/9138] Built OAI.Probability.SwitchChain.RankOneCentering (14s)
+✔ [8978/9138] Built OAI.Probability.SwitchChain.ProjectionRangeInteraction (14s)
+ℹ [8979/9138] Built SharpSwitchGap.WeightedInteraction (16s)
+info: SharpSwitchGap/WeightedInteraction.lean:88:0: 'SharpSwitchGap.WeightedInteraction.rank_one_disjoint_interaction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8980/9138] Built OAI.Probability.SwitchChain.SliceImageNorm (14s)
+✔ [8981/9138] Built OAI.Probability.SwitchChain.SliceGramOrbit (12s)
+✔ [8982/9138] Built OAI.Probability.SwitchChain.SlicePermutationAction (12s)
+✔ [8983/9138] Built OAI.Probability.SwitchChain.SliceNormalizedFamily (13s)
+✔ [8984/9138] Built OAI.Probability.SwitchChain.DisjointReconstruct (13s)
+✔ [8985/9138] Built OAI.Probability.SwitchChain.InitialTVGraph (13s)
+✔ [8986/9138] Built OAI.Probability.SwitchChain.MixingTimeFromTV (12s)
+✔ [8987/9138] Built SharpSwitchGap.Statement (12s)
+✔ [8988/9138] Built OAI.Probability.SwitchChain.TripleInternalEncoding (16s)
+✔ [8989/9138] Built OAI.Probability.SwitchChain.SwitchFoundations (16s)
+✔ [8990/9138] Built OAI.Probability.SwitchChain.MatchingCount (17s)
+✔ [8991/9138] Built OAI.Probability.SwitchChain.TripleStateReindex (23s)
+✔ [8992/9138] Built OAI.Probability.SwitchChain.ProposalUniqueness (15s)
+✔ [8993/9138] Built OAI.Probability.SwitchChain.PairFiber (16s)
+✔ [8994/9138] Built OAI.Probability.SwitchChain.OrthogonalPairResampling (17s)
+✔ [8995/9138] Built OAI.Probability.SwitchChain.PairFibers (17s)
+✔ [8996/9138] Built OAI.Probability.SwitchChain.CrossCellMoments (16s)
+✔ [8997/9138] Built OAI.Probability.SwitchChain.CrossIndependent (20s)
+✔ [8998/9138] Built OAI.Probability.SwitchChain.CountEigenEquation (19s)
+✔ [8999/9138] Built OAI.Probability.SwitchChain.FixedBlockVariance (17s)
+✔ [9000/9138] Built OAI.Probability.SwitchChain.ForcedColumns (16s)
+✔ [9001/9138] Built OAI.Probability.SwitchChain.SliceGeneratorEquality (16s)
+✔ [9002/9138] Built OAI.Probability.SwitchChain.SliceFrameProjection (17s)
+✔ [9003/9138] Built OAI.Probability.SwitchChain.SliceSynthesisAction (16s)
+✔ [9004/9138] Built SharpSwitchGap.WeightedCentering (16s)
+✔ [9005/9138] Built SharpSwitchGap.JohnsonGap (17s)
+✔ [9006/9138] Built OAI.Probability.SwitchChain.SliceGramProfile (17s)
+✔ [9007/9138] Built OAI.Probability.SwitchChain.SlicePathComparison (17s)
+✔ [9008/9138] Built OAI.Probability.SwitchChain.DisjointInternal (16s)
+✔ [9009/9138] Built OAI.Probability.SwitchChain.DisjointBoundary (16s)
+✔ [9010/9138] Built OAI.Probability.SwitchChain.TripleMatrixEncoding (16s)
+✔ [9011/9138] Built OAI.Probability.SwitchChain.FourVertexSwitch (16s)
+✔ [9012/9138] Built OAI.Probability.SwitchChain.SwitchPairFiber (15s)
+✔ [9013/9138] Built OAI.Probability.SwitchChain.KernelNormalization (15s)
+✔ [9014/9138] Built OAI.Probability.SwitchChain.PairFiberDegree (15s)
+✔ [9015/9138] Built OAI.Probability.SwitchChain.DisjointFiberCell (16s)
+✔ [9016/9138] Built OAI.Probability.SwitchChain.PairTripleBridge (15s)
+✔ [9017/9138] Built OAI.Probability.SwitchChain.PairFiberRedundancy (15s)
+✔ [9018/9138] Built OAI.Probability.SwitchChain.PairRangeInteraction (16s)
+✔ [9019/9138] Built OAI.Probability.SwitchChain.PairProjectionCell (16s)
+✔ [9020/9138] Built OAI.Probability.SwitchChain.IndependentCell (16s)
+✔ [9021/9138] Built OAI.Probability.SwitchChain.CellProjectionTransport (16s)
+✔ [9022/9138] Built OAI.Probability.SwitchChain.CrossCellConditionalExpectation (16s)
+✔ [9023/9138] Built OAI.Probability.SwitchChain.CrossCellIndependence (15s)
+✔ [9024/9138] Built OAI.Probability.SwitchChain.TripleCountEigenvalue (15s)
+✔ [9025/9138] Built OAI.Probability.SwitchChain.FixedBlockMarginal (15s)
+✔ [9026/9138] Built OAI.Probability.SwitchChain.SliceSynthesisBounds (16s)
+✔ [9027/9138] Built OAI.Probability.SwitchChain.SliceActualSynthesis (17s)
+✔ [9028/9138] Built SharpSwitchGap.AffinePlane (16s)
+✔ [9029/9138] Built OAI.Probability.SwitchChain.DisjointRealization (16s)
+✔ [9030/9138] Built OAI.Probability.SwitchChain.TripleGraphEncoding (16s)
+✔ [9031/9138] Built OAI.Probability.SwitchChain.FrozenRows (15s)
+✔ [9032/9138] Built OAI.Probability.SwitchChain.SwitchInFiber (15s)
+✔ [9033/9138] Built OAI.Probability.SwitchChain.SwitchMultiplicity (16s)
+✔ [9034/9138] Built OAI.Probability.SwitchChain.SwitchLaplacian (16s)
+✔ [9035/9138] Built OAI.Probability.SwitchChain.SwitchTV (16s)
+✔ [9036/9138] Built OAI.Probability.SwitchChain.PairFiberEquiv (15s)
+✔ [9037/9138] Built OAI.Probability.SwitchChain.TripleCellVarianceGluing (16s)
+✔ [9038/9138] Built OAI.Probability.SwitchChain.DisjointProjectionCell (16s)
+✔ [9039/9138] Built OAI.Probability.SwitchChain.DisjointCellGlobal (16s)
+✔ [9040/9138] Built OAI.Probability.SwitchChain.IndependentProjectionInteraction (15s)
+✔ [9041/9138] Built OAI.Probability.SwitchChain.IndependentMomentProjection (15s)
+✔ [9042/9138] Built SharpSwitchGap.Compression (16s)
+✔ [9043/9138] Built OAI.Probability.SwitchChain.CrossCellAffineComposition (16s)
+✔ [9044/9138] Built SharpSwitchGap.CellWeights (17s)
+✔ [9045/9138] Built OAI.Probability.SwitchChain.TripleCountGram (15s)
+✔ [9046/9138] Built OAI.Probability.SwitchChain.FiniteVarianceDecomposition (16s)
+✔ [9047/9138] Built OAI.Probability.SwitchChain.SliceOperatorComparison (17s)
+✔ [9048/9138] Built SharpSwitchGap.EventPlane (16s)
+✔ [9049/9138] Built OAI.Probability.SwitchChain.DisjointFiberCoordinates (16s)
+✔ [9050/9138] Built OAI.Probability.SwitchChain.DisjointStateCell (15s)
+✔ [9051/9138] Built OAI.Probability.SwitchChain.DisjointCoordinateFeasibility (16s)
+✔ [9052/9138] Built OAI.Probability.SwitchChain.TripleMatrixFinEquiv (15s)
+✔ [9053/9138] Built OAI.Probability.SwitchChain.TriplePairFiber (16s)
+✔ [9054/9138] Built OAI.Probability.SwitchChain.HavelConnectivity (16s)
+✔ [9055/9138] Built OAI.Probability.SwitchChain.PairTradeSwitch (16s)
+✔ [9056/9138] Built OAI.Probability.SwitchChain.ProposalLaplacian (15s)
+✔ [9057/9138] Built OAI.Probability.SwitchChain.PairFiberBridge (16s)
+✔ [9058/9138] Built OAI.Probability.SwitchChain.CrossCellProjectionIndependence (16s)
+✔ [9059/9138] Built OAI.Probability.SwitchChain.FiniteVarianceEuclidean (16s)
+✔ [9060/9138] Built OAI.Probability.SwitchChain.VariableBlockVariance (16s)
+✔ [9061/9138] Built OAI.Probability.SwitchChain.SliceProjectionComparison (16s)
+ℹ [9062/9138] Built SharpSwitchGap.WeightedSliceRange (17s)
+info: SharpSwitchGap/WeightedSliceRange.lean:96:0: 'SharpSwitchGap.WeightedSliceRange.weighted_on_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9063/9138] Built OAI.Probability.SwitchChain.DisjointCellCounting (17s)
+✔ [9064/9138] Built OAI.Probability.SwitchChain.TripleCellTransport (16s)
+✔ [9065/9138] Built OAI.Probability.SwitchChain.MainFromGap (15s)
+✔ [9066/9138] Built OAI.Probability.SwitchChain.PairFiberConnectivity (15s)
+✔ [9067/9138] Built OAI.Probability.SwitchChain.PairSquaredEnergy (15s)
+✔ [9068/9138] Built OAI.Probability.SwitchChain.PairSwapInjectivity (16s)
+✔ [9069/9138] Built OAI.Probability.SwitchChain.PairFiberOrientation (16s)
+✔ [9070/9138] Built OAI.Probability.SwitchChain.PairFiberEnergy (16s)
+✔ [9071/9138] Built OAI.Probability.SwitchChain.PairFiberTransport (16s)
+✔ [9072/9138] Built OAI.Probability.SwitchChain.PairEqualityErrorLine (17s)
+✔ [9073/9138] Built OAI.Probability.SwitchChain.PairFiberSliceComparison (16s)
+✔ [9074/9138] Built OAI.Probability.SwitchChain.PairEqualityProjection (16s)
+✔ [9075/9138] Built OAI.Probability.SwitchChain.BalancedBlockVariance (16s)
+✔ [9076/9138] Built SharpSwitchGap.CrossCellPlane (17s)
+✔ [9077/9138] Built OAI.Probability.SwitchChain.SliceReindexedComparison (16s)
+ℹ [9078/9138] Built SharpSwitchGap.WeightedSlice (16s)
+info: SharpSwitchGap/WeightedSlice.lean:114:0: 'SharpSwitchGap.WeightedSlice.weighted_of_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9079/9138] Built OAI.Probability.SwitchChain.PairPoincare (16s)
+✔ [9080/9138] Built OAI.Probability.SwitchChain.DisjointStateLaw (18s)
+✔ [9081/9138] Built OAI.Probability.SwitchChain.SwitchFlip (17s)
+✔ [9082/9138] Built OAI.Probability.SwitchChain.PairAssignmentMoves (15s)
+✔ [9083/9138] Built OAI.Probability.SwitchChain.PairCrossToggleTransport (15s)
+✔ [9084/9138] Built OAI.Probability.SwitchChain.PairEqualityOrientation (16s)
+✔ [9085/9138] Built OAI.Probability.SwitchChain.PairEqualityLocalization (15s)
+✔ [9086/9138] Built OAI.Probability.SwitchChain.PairEqualitySlice (14s)
+✔ [9087/9138] Built OAI.Probability.SwitchChain.PairEqualityCell (15s)
+✔ [9088/9138] Built OAI.Probability.SwitchChain.PairEqualityProjectionFacts (19s)
+✔ [9089/9138] Built OAI.Probability.SwitchChain.MatrixRowVariance (15s)
+✔ [9090/9138] Built OAI.Probability.SwitchChain.SliceCardEncoding (15s)
+ℹ [9091/9138] Built SharpSwitchGap.PartialChecks (15s)
+info: SharpSwitchGap/PartialChecks.lean:5:0: 'SharpSwitchGap.WeightedSliceRange.weighted_on_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/PartialChecks.lean:6:0: 'SharpSwitchGap.WeightedSlice.weighted_of_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/PartialChecks.lean:7:0: 'SharpSwitchGap.WeightedInteraction.rank_one_disjoint_interaction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [9092/9138] Built SharpSwitchGap.WeightedSliceTransport (17s)
+✔ [9093/9138] Built OAI.Probability.SwitchChain.PairSwitchComparison (15s)
+✔ [9094/9138] Built OAI.Probability.SwitchChain.PairGeneratorSquare (16s)
+✔ [9095/9138] Built OAI.Probability.SwitchChain.DisjointEqualityFlags (15s)
+✔ [9096/9138] Built OAI.Probability.SwitchChain.DisjointCrossCellEquiv (16s)
+✔ [9097/9138] Built OAI.Probability.SwitchChain.PairAffineInteraction (17s)
+✔ [9098/9138] Built OAI.Probability.SwitchChain.CrossTogglePairs (15s)
+✔ [9099/9138] Built OAI.Probability.SwitchChain.PairLocalComparison (17s)
+✔ [9100/9138] Built OAI.Probability.SwitchChain.PairSwapFlip (16s)
+✔ [9101/9138] Built OAI.Probability.SwitchChain.PairFiberEqualityTransport (16s)
+✔ [9102/9138] Built OAI.Probability.SwitchChain.PairEqualityUnordered (15s)
+✔ [9103/9138] Built OAI.Probability.SwitchChain.TripleActualRowBound (15s)
+✔ [9104/9138] Built OAI.Probability.SwitchChain.PairEqualityRestriction (18s)
+✔ [9105/9138] Built SharpSwitchGap.JohnsonTransport (15s)
+✔ [9106/9138] Built OAI.Probability.SwitchChain.PairDisjointBudget (16s)
+✔ [9107/9138] Built OAI.Probability.SwitchChain.DisjointGraphAffine (15s)
+✔ [9108/9138] Built OAI.Probability.SwitchChain.CrossToggleCells (15s)
+✔ [9109/9138] Built OAI.Probability.SwitchChain.LocalGapEndgame (15s)
+✔ [9110/9138] Built OAI.Probability.SwitchChain.PairSwapFlipProjection (16s)
+✔ [9111/9138] Built OAI.Probability.SwitchChain.PairEqualityUnorderedSum (16s)
+✔ [9112/9138] Built OAI.Probability.SwitchChain.ActualTripleSquare (16s)
+✔ [9113/9138] Built SharpSwitchGap.SharpComparison (15s)
+✔ [9114/9138] Built SharpSwitchGap.GraphCellWeights (15s)
+✔ [9115/9138] Built OAI.Probability.SwitchChain.PairActualAffine (16s)
+✔ [9116/9138] Built OAI.Probability.SwitchChain.CrossToggleGain (16s)
+✔ [9117/9138] Built OAI.Probability.SwitchChain.PairEqualityBudget (16s)
+ℹ [9118/9138] Built SharpSwitchGap.B1Checks (15s)
+info: SharpSwitchGap/B1Checks.lean:4:0: 'SharpSwitchGap.Johnson.centered_poincare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:5:0: 'SharpSwitchGap.WeightedSlice.residual_johnson_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:6:0: 'SharpSwitchGap.WeightedSlice.weighted_centered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B1Checks.lean:7:0: 'SharpSwitchGap.SharpComparison.generator_le_laplacian' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9119/9138] Built SharpSwitchGap.GraphCellCompression (15s)
+✔ [9120/9138] Built OAI.Probability.SwitchChain.PairDisjointAssembly (16s)
+✔ [9121/9138] Built OAI.Probability.SwitchChain.PairEqualityBudgetUnordered (15s)
+✔ [9122/9138] Built SharpSwitchGap.WeightedError (16s)
+✔ [9123/9138] Built OAI.Probability.SwitchChain.Main (14s)
+✔ [9124/9138] Built SharpSwitchGap.GraphCellPlane (18s)
+✔ [9125/9138] Built SharpSwitchGap.WeightedFiberBudget (17s)
+✔ [9126/9138] Built SharpSwitchGap.WeightedCell (16s)
+✔ [9127/9138] Built SharpSwitchGap.WeightedGlobalBudget (12s)
+ℹ [9128/9138] Built SharpSwitchGap.B2Checks (11s)
+info: SharpSwitchGap/B2Checks.lean:3:0: 'SharpSwitchGap.GraphCellWeights.left_weight_eq_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:4:0: 'SharpSwitchGap.GraphCellWeights.right_weight_eq_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:5:0: 'SharpSwitchGap.WeightedError.norm_sq_eq_weighted_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:6:0: 'SharpSwitchGap.WeightedCell.cell_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B2Checks.lean:7:0: 'SharpSwitchGap.WeightedCell.actual_named_interaction' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9129/9138] Built SharpSwitchGap.WeightedPairs (11s)
+✔ [9130/9138] Built SharpSwitchGap.SharpAssembly (12s)
+ℹ [9131/9138] Built SharpSwitchGap.B3Checks (16s)
+info: SharpSwitchGap/B3Checks.lean:3:0: 'SharpSwitchGap.WeightedPairs.pair_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:4:0: 'SharpSwitchGap.SharpAssembly.disjoint_ge_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:5:0: 'SharpSwitchGap.SharpAssembly.generator_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B3Checks.lean:6:0: 'SharpSwitchGap.SharpAssembly.centered_poincare' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9132/9138] Built SharpSwitchGap.Main (17s)
+ℹ [9133/9138] Built SharpSwitchGap.Baseline (16s)
+info: SharpSwitchGap/Baseline.lean:35:0: 'OAI.Problem315.switch_chain_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/Baseline.lean:36:0: 'OAI.Problem315.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/Baseline.lean:37:0: 'OAI.Problem315.switch_connectivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9134/9138] Built SharpSwitchGap.Curveball (22s)
+ℹ [9135/9138] Built SharpSwitchGap.B4Checks (13s)
+info: SharpSwitchGap/B4Checks.lean:3:0: 'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:4:0: 'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:5:0: 'SharpSwitchGap.Baseline.sharp_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B4Checks.lean:6:0: 'SharpSwitchGap.Baseline.sharp_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9136/9138] Built SharpSwitchGap.B5Checks (13s)
+info: SharpSwitchGap/B5Checks.lean:3:0: 'SharpSwitchGap.Curveball.kernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:4:0: 'SharpSwitchGap.Curveball.operator_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:5:0: 'SharpSwitchGap.Curveball.kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:6:0: 'SharpSwitchGap.Curveball.kernel_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:7:0: 'SharpSwitchGap.Curveball.kernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:8:0: 'SharpSwitchGap.Curveball.operator_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:9:0: 'SharpSwitchGap.Curveball.gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:10:0: 'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SharpSwitchGap/B5Checks.lean:11:0: 'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9137/9138] Built SharpSwitchGap (13s)
+Build completed successfully (9138 jobs).
+build exit 0 after 946 s
+=== B5 2026-10-11T10:34:30.1335008+02:00
+'SharpSwitchGap.Curveball.kernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.operator_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.kernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.operator_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Curveball.gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+B5 exit 0
+=== B4 2026-10-11T10:34:46.7270236+02:00
+'SharpSwitchGap.switch_chain_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.switch_chain_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Baseline.sharp_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpSwitchGap.Baseline.sharp_tv_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+B4 exit 0
+=== done 2026-10-11T10:35:04.7467318+02:00

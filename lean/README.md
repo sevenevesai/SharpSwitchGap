@@ -77,6 +77,9 @@ Set `LEAN_NUM_THREADS` to limit parallelism; `MATHLIB_CACHE_DIR` relocates the M
 - 2026-10-11: `verify` sync exit 0; `check_fresh.ps1 -Audit SharpSwitchGap/B5Checks.lean`
   fresh `lake build` 625.86 s and audit 19.97 s, both exit 0; `B4Checks` exit 0; all 13 prints
   the three axioms, no `sorry`. Output: `evidence/audit-2026-10-11.txt`.
+- 2026-10-11, this repository from scratch: `lake exe cache get` exit 0; `lake build` exit 0
+  after 946 s with four threads (upstream modules and this project); `B5Checks` and `B4Checks`
+  exit 0 with all 13 prints the three axioms. Output: `evidence/build-2026-10-11.txt`.
 
 ## Not formalized
 

@@ -86,9 +86,10 @@ lake env lean SharpSwitchGap/B4Checks.lean
 
 Success: every command exits 0, no `sorry` diagnostic, and each of the nine prints of
 `B5Checks.lean` and four of `B4Checks.lean` reads `depends on axioms: [propext,
-Classical.choice, Quot.sound]`. The last recorded fresh build took 626 s with four threads;
-the audits take about 20 s each. `lean/evidence/audit-2026-10-11.txt` is the recorded output,
-and `lean/README.md` lists every checked declaration and what is not formalized.
+Classical.choice, Quot.sound]`. A from-scratch build of this repository on 2026-10-11 took
+946 s with four threads after the Mathlib cache fetch; the audits take about 20 s each.
+`lean/evidence/` holds the recorded output, and `lean/README.md` lists every checked
+declaration and what is not formalized.
 
 `python verify_vendor.py --fetch` additionally downloads each vendored file from GitHub at the
 pinned commit and compares Git blob hashes. `check_fresh.sh` (or `check_fresh.ps1` on Windows)
